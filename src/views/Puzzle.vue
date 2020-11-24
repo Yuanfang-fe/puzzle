@@ -367,7 +367,7 @@ export default {
   position: relative;
 }
 .bg {
-  background-image: url("../assets/image/puzzle/body-bg.png");
+  background-image: url("https://static.wxb.com.cn/frontEnd/images/common/body-bg.png");
   background-size: cover;
   background-repeat: no-repeat;
   overflow: auto;
@@ -398,7 +398,7 @@ export default {
 .puzzle-bg {
   position: relative;
   top: 0.05rem;
-  background-image: url("../assets/image/puzzle/dialog-bg.png");
+  background-image: url("https://static.wxb.com.cn/frontEnd/images/common/dialog-bg.png");
   width: 100%;
   background-size: contain;
   background-repeat: no-repeat;
@@ -583,7 +583,7 @@ export default {
   top: 5%;
   width: 90%;
   margin: auto;
-  /* background-image: url('../assets/image/puzzle/dialog-bg.png'); */
+  /* background-image: url('https://static.wxb.com.cn/frontEnd/images/common/dialog-bg.png'); */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top center;
