@@ -609,7 +609,7 @@ export default {
   padding: 14px;
   background-size: contain;
   background-repeat: no-repeat;
-  background-image: url(/img/btn-large-bg.0ec647ec.png);
+  background-image: url("../assets/image/puzzle/btn-large-bg.png");
   background-position: center;
 }
 .cancel {
