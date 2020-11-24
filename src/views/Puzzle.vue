@@ -92,9 +92,10 @@
 </template>
 
 <script>
-import { ref, onMounted } from "vue";
+import { ref, onMounted, onUnmounted } from "vue";
 import { useRouter } from "vue-router";
 import { Toast, Rate, Field } from "vant";
+import * as rrweb from 'rrweb'
 
 export default {
   components: {
@@ -317,6 +318,7 @@ export default {
     function cancel() {
       console.log("cancel");
       visible.value = false;
+      reStart()
       // saveToLocalStorage();
       // router.push({
       //   path: "/puzzle-replay",
@@ -327,6 +329,10 @@ export default {
     function saveToLocalStorage() {
       localStorage.setItem("events", JSON.stringify(events));
     }
+
+    onUnmounted(()=>{
+      stopReordFn();
+    })
 
     return {
       imgLength,
@@ -681,53 +687,5 @@ export default {
 .dialog .block:nth-child(8),
 .puzzle-content .block:nth-child(9) {
   background-position: -200px -200px;
-}
-.bounce-enter-active {
-  animation: bounceIn 2s;
-}
-.bounce-leave-active {
-  animation: bounceDown 2s;
-}
-@keyframes bounceIn {
-  from,
-  60%,
-  75%,
-  90%,
-  to {
-    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-  }
-  from {
-    opacity: 0;
-    -webkit-transform: translate3d(0, 500px, 0);
-    transform: translate3d(0, 500px, 0);
-  }
-  50% {
-    opacity: 1;
-  }
-  to {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-}
-@keyframes bounceDown {
-  from,
-  60%,
-  75%,
-  90%,
-  to {
-    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-  }
-  from {
-    opacity: 1;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-  to {
-    opacity: 0;
-    -webkit-transform: translate3d(0, 600px, 0);
-    transform: translate3d(0, 600px, 0);
-  }
 }
 </style>
