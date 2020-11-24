@@ -27,5 +27,11 @@ html {
 body {
   margin: 0;
   padding: 0;
+  font-size: 14px;
+  -webkit-overflow-scrolling: touch;
+  
+}
+body::-webkit-scrollbar {
+  display: none;
 }
 </style>
