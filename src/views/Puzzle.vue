@@ -249,7 +249,6 @@ export default {
 
         //判断是否完成
         if (totalDis(nowOrder) == 0) {
-          Toast("已完成");
           clearInterval(eventId.value);
           resultText.value = "恭喜你！成功拼成！";
 
@@ -291,6 +290,11 @@ export default {
       eventId.value = null;
       timeCountDown();
       changeImg();
+      if(showTip.value) {
+        openTip()
+      }
+      blocks.value.children[oldIndex].classList.remove("active");
+      oldIndex = null;
     }
 
     // 提示
@@ -438,7 +442,7 @@ export default {
   top: 0;
   width: 100%;
   height: 100%;
-  z-index: 1;
+  z-index: 5;
 }
 .btn,
 .big-btn {

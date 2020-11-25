@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
+    "fastclick": "^1.0.6",
     "rrweb": "^0.9.9",
     "rrweb-player": "^0.6.5",
     "vant": "^3.0.0-beta.10",
@@ -39,7 +40,8 @@
       "parser": "babel-eslint"
     },
     "globals": {
-      "rrweb": true
+      "rrweb": true,
+      "FastClick": true
     },
     "rules": {}
   },

@@ -3,6 +3,8 @@
 </template>
 
 <script>
+var FastClick = require('fastclick');
+
 export default {
   setup(){
     window.onresize = setRootFontSize
@@ -10,6 +12,8 @@ export default {
       document.getElementsByTagName('html')[0].style.fontSize = 100 / 375 * window.innerWidth + 'px';
     }
     setRootFontSize()
+
+    FastClick.attach(document.body);
   }
 }
 </script>
