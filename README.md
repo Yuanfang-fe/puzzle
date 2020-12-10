@@ -1,5 +1,7 @@
 # puzzle
 
+vue3 拼图小游戏，可以回放操作过程
+
 ## Project setup
 ```
 npm install
